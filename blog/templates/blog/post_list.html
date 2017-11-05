@@ -5,7 +5,17 @@
     <body>
         <h1>Заголовок</h1>
         <h2>Подзаголовок</h2>
-        <p>Hi there!</p>
-        <p>Йоу Сюмбель как ты меня нашла уходи</p>
+        <div>
+          <p>Hi there!</p>
+          <p>Йоу Сюмбель как ты меня нашла уходи</p>
+        </div>
+
+        {% for post in posts %}
+          <div>
+            <p><strong>published</strong>: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+          </div>
+        {% endfor %}
     </body>
 </html>
