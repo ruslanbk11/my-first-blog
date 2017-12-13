@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="login_form">
+      <form action="{% url 'login' %}" method="post" role="form">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="username">Имя пользователя</label>
+          <input type="text" class="form-control" name="username" id="username" placeholder="Введите логин">
+        </div>
+        <div class="form-group">
+          <label for="password">Пароль</label>
+          <input type="password" class="form-control" name="password" id="password" placeholder="Введите пароль">
+          {% if login_error %}
+            <label class="error">Неверный логин или пароль</label>
+          {% endif %}
+        </div>
+        <input class="btn btn-default" type="submit" value="Войти">
+        <div class="bg-success"><a href="/auth/register/">Регистрация</a></div>
+      </form>
+    </div>
+{% endblock %}

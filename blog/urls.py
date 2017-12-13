@@ -7,4 +7,7 @@ urlpatterns = [
     url(r'^post/new/$', views.post_new, name='post_new'),
     url(r'^post/(?P<pk>\d+)/edit/$', views.post_edit, name='post_edit'),
     url(r'^post/(?P<pk>\d+)/delete/$', views.post_delete, name='post_delete'),
+    url(r'^auth/login/$', views.login, name='login'),
+    url(r'^auth/logout/$', views.logout, name='logout'),
+    url(r'^auth/register/$', views.register, name='register'),
 ]
