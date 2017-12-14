@@ -14,9 +14,9 @@
             <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
         {% endif %}
         {% if username %}
-            <h1><a href="{% url 'logout' %}">Выйти ({{ username }})</a></h1>
+            <h2><a href="{% url 'logout' %}">Выйти ({{ username }})</a></h2>
         {% else %}
-            <h1><a href="{% url 'login' %}">Войти</a></h1>
+            <h2><a href="{% url 'login' %}">Войти</a></h2>
         {% endif %}
     </div>
     <div class="content container">

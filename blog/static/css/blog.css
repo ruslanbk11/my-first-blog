@@ -2,7 +2,8 @@ h1 a {
     color: red;
     font-family: 'Lobster';
 }
-h2 {
+
+h2 a {
     color: white;
 }
 
@@ -18,7 +19,13 @@ h2 {
     text-decoration: none;
 }
 
-.bg-success a {
+.page-header h2, .page-header h2 a, .page-header h2 a:visited, .page-header h2 a:active {
+    color: #ffffff;
+    font-size: 30pt;
+    text-decoration: none;
+}
+
+.reg-btn a {
     color: #ffffff;
     background-color: red;
 }
